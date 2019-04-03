@@ -1,0 +1,28 @@
+How To Install Tomcat In MacOS
+Apache tomcat is a widely used web server. It can be installed an run in numerous operating system like Windows, Linux and MacOS. This article will tell you how to install it in MacOS step by step. 
+First make sure you have installed jdk in MacOS, run java -version in terminal to get the installed version. If you do not have installed jdk, you need to download and install one.
+
+sh-3.2# java -version
+java version "1.8.0_172"
+Java(TM) SE Runtime Environment (build 1.8.0_172-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
+Download tomcat install package from https://tomcat.apache.org/download-90.cgi page. You can select zip file or tar.gz file.
+After download, unzip the compress file to a local directory.
+Run cd go to the unzip file directory.
+Then run below command to make the .sh file executable.
+sh-3.2# cd /Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8
+
+sh-3.2# sudo chmod +x ./bin/*.sh
+
+Now all the .sh file in tomcat bin directory is executable, you can run ls -al command to see that.
+now run ./bin/startup.sh to start tomcat. When you see below message, it means tomcat has been started successfully.
+sh-3.2# ./bin/startup.sh 
+Using CATALINA_BASE:   /Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8
+Using CATALINA_HOME:   /Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8
+Using CATALINA_TMPDIR: /Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8/temp
+Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+Using CLASSPATH:       /Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8/bin/bootstrap.jar:/Users/zhaosong/Documents/WorkSpace/tool/apache-tomcat-9.0.8/bin/tomcat-juli.jar
+Tomcat started.
+Now open a web browser, input http://localhost:8080/ in the url address input box. Click enter then you can see below web page.
+tomcat start successful
+To stop tomcat, you can run ./bin/shutdown.sh command in terminal.
